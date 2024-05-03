@@ -1,0 +1,61 @@
+:root {
+    --main-font: 'Courier New', Courier, monospace;
+    --main-bg-image: url('https://www.transparenttextures.com/patterns/paper.png');
+    --main-color: #008B8B;
+    --main-bg-color: #fff;
+}
+
+body {
+    background-image: var(--main-bg-image);
+    font-family: var(--main-font);
+}
+
+#wrapper {
+    background-image: var(--main-bg-image);
+    width: 50%;
+    margin: 0 auto;
+    background-color: var(--main-bg-color);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 2px #000;
+}
+
+#input,
+#add {
+    font-family: var(--main-font);
+    font-size: 20px;
+}
+
+#add {
+    background-color: var(--main-color);
+    color: var(--main-bg-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.todo-item {
+    background-image: var(--main-bg-image);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    list-style-type: none;
+}
+
+.todo-checkbox {
+    margin-right: 10px;
+}
+
+.delete-button {
+    background-color: var(--main-color);
+    color: var(--main-bg-color);
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.checked {
+    text-decoration: line-through;
+}
