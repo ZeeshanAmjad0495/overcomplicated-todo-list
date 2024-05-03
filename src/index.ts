@@ -20,7 +20,7 @@ export default class TodoList {
 	createTodoItem(text: string, index: number): HTMLElement {
 		const item = document.createElement("li");
 		item.className = "todo-item";
-		item.dataset.index = index.toString();
+		item.dataset["index"] = index.toString();
 		item.innerHTML = `
         <input type="checkbox" class="todo-checkbox" id="todo-${index}">
         <label for="todo-${index}" class="todo-text">${text}</label>
@@ -33,7 +33,7 @@ export default class TodoList {
 		const target = event.target as HTMLElement;
 		const item = target.closest(".todo-item");
 		if (!item) return;
-		const index = Number((item as HTMLElement).dataset.index);
+		const index = Number((item as HTMLElement).dataset["index"]);
 		if (target.matches(".todo-checkbox")) {
 			this.todos = this.todos.map((todo, i) =>
 				i === index
